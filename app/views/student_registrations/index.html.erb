@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Student Registrations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Email</th>
+      <th>Cell</th>
+      <th>Group</th>
+      <th>Education</th>
+      <th>Subject</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @student_registrations.each do |student_registration| %>
+      <tr>
+        <td><%= student_registration.name %></td>
+        <td><%= student_registration.age %></td>
+        <td><%= student_registration.gender %></td>
+        <td><%= student_registration.email %></td>
+        <td><%= student_registration.cell %></td>
+        <td><%= student_registration.group %></td>
+        <td><%= student_registration.education %></td>
+        <td><%= student_registration.subject %></td>
+        <td><%= link_to 'Show', student_registration %></td>
+        <td><%= link_to 'Edit', edit_student_registration_path(student_registration) %></td>
+        <td><%= link_to 'Destroy', student_registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Student registration', new_student_registration_path %>

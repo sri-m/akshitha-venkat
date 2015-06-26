@@ -1,0 +1,17 @@
+<%= semantic_form_for @student_registration do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name, :input_html => { :size => 20 }, :required => true, :hint => "Please enter correct name" %>
+    <%= f.input :age, :input_html => { :size => 20 } %>
+    <%= f.input :gender, :as => :radio, :collection => [:Male, :Female] %>
+    <%= f.input :email, :input_html => { :size => 20 } %>
+    <%= f.input :cell, :input_html => { :size => 20 } %>
+    <%= f.input :group, :as => :select, :collection => Order.pluck(:order_name) %>
+    <%= f.input :education, :as => :select, :collection => Education.pluck(:qualification) %>
+    <%= f.input :subject, :input_html => { :class => 'autogrow', :rows => 10, :cols => 20, :maxlength => 1000  }, :label => "Address" %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+    <%= f.action :cancel, :as => :link %>
+  <% end %>
+<% end %>

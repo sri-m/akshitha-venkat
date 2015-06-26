@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @account.supplier_id %>
+</p>
+
+<p>
+  <strong>Acc name:</strong>
+  <%= @account.acc_name %>
+</p>
+
+<p>
+  <strong>Acc bal:</strong>
+  <%= @account.acc_bal %>
+</p>
+
+<p>
+  <strong>Acc type:</strong>
+  <%= @account.acc_type %>
+</p>
+
+<p>
+  <strong>Acc number:</strong>
+  <%= @account.acc_number %>
+</p>
+
+<p>
+<%= @account.supplier.name %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

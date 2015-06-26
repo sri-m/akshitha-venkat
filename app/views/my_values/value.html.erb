@@ -1,0 +1,20 @@
+<h1><%= @my_value %></h1>
+<br/>
+<br/>
+<%= @my_desc %>
+<%#= @my_theatre_vallues %>
+<br />
+Country: <br/>
+Id:      <br/>
+
+
+<%#= @docu.xpath("//city/@name") %>
+<table border="1">
+<tr>
+<td>Max Temp</td><td>Name</td>
+</tr>
+<tr>
+<td><%= @doc.xpath("//temperature/@max") %></td><td><%= @doc.xpath("//city/@name") %></td>
+</tr>
+
+</table>
